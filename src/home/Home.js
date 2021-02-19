@@ -26,7 +26,7 @@ async handleSubmit(e) {
   const {name, phone, email, comments} = this.state
   this.reset()
   // toast.success('Email has been successfully sent!');    
-  await axios.post('/v1/api/form', {
+  await axios.post('/api/form', {
       name, 
       phone,
       email,
