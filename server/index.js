@@ -10,14 +10,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 const route = express.Router();
 
-app.use('/v1', route);
+// app.use('/v1', route);
 app.listen(SERVER_PORT, () => {
     console.log(`Server is listening on ${SERVER_PORT}`)
 })
 
-route.get("/", (req, res) => res.send("Hello World!"));
+// route.get("/", (req, res) => res.send("Hello World!"));
 
-route.post('/api/form', (req, res) => {
+app.post('/api/form', (req, res) => {
   nodemailer.createTestAccount((err, account) => {
       const htmlEmail = `
       <h4>Consultation Request Information:</h4>
