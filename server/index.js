@@ -8,14 +8,12 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
-const route = express.Router();
+// const route = express.Router();
 
 // app.use('/v1', route);
 app.listen(SERVER_PORT, () => {
     console.log(`Server is listening on ${SERVER_PORT}`)
 })
-
-// route.get("/", (req, res) => res.send("Hello World!"));
 
 app.post('/api/form', (req, res) => {
   nodemailer.createTestAccount((err, account) => {
