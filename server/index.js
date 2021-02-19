@@ -10,7 +10,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // const route = express.Router();
 
-app.use(express.static(path.join(__dirname, '/build')));
 // app.use('/v1', route);
 app.listen(SERVER_PORT, () => {
     console.log(`Server is listening on ${SERVER_PORT}`)
